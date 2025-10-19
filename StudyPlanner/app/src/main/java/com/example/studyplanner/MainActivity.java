@@ -19,7 +19,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        // Force light mode as dark mode has been disabled
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
 
         setContentView(R.layout.activity_main);
@@ -47,10 +46,8 @@ public class MainActivity extends AppCompatActivity {
         // Determine the start destination
         SessionManager sessionManager = SessionManager.getInstance(this);
         if (sessionManager.getUserId() == -1) {
-            // User is not logged in, set start destination to login screen
             graph.setStartDestination(R.id.loginFragment);
         } else {
-            // User is logged in, set start destination to dashboard
             graph.setStartDestination(R.id.dashboardFragment);
         }
 
