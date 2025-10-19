@@ -49,7 +49,6 @@ public class SubjectAdapter extends RecyclerView.Adapter<SubjectAdapter.SubjectV
     static class SubjectViewHolder extends RecyclerView.ViewHolder {
         private final ItemSubjectGroupBinding binding;
         private final TaskAdapter.OnTaskActionListener taskListener;
-        // 1. Give each ViewHolder its own "expanded" state
         private boolean isExpanded = false;
 
         public SubjectViewHolder(ItemSubjectGroupBinding binding, TaskAdapter.OnTaskActionListener taskListener) {
@@ -61,7 +60,6 @@ public class SubjectAdapter extends RecyclerView.Adapter<SubjectAdapter.SubjectV
         public void bind(SubjectWithTasks subjectWithTasks) {
             binding.textViewSubjectName.setText(subjectWithTasks.subject.name);
 
-            // Set up the inner RecyclerView
             TaskAdapter innerTaskAdapter = new TaskAdapter(taskListener);
             binding.recyclerViewInnerTasks.setLayoutManager(new LinearLayoutManager(itemView.getContext()));
             binding.recyclerViewInnerTasks.setAdapter(innerTaskAdapter);
@@ -76,12 +74,10 @@ public class SubjectAdapter extends RecyclerView.Adapter<SubjectAdapter.SubjectV
             }
             innerTaskAdapter.submitList(tasksWithSubject);
 
-            // 2. Set the initial state when binding
             updateExpandedState();
 
-            // 3. Set the click listener for the expand button
             binding.buttonExpand.setOnClickListener(v -> {
-                isExpanded = !isExpanded; // Toggle the state
+                isExpanded = !isExpanded;
                 updateExpandedState();
             });
 
@@ -91,7 +87,6 @@ public class SubjectAdapter extends RecyclerView.Adapter<SubjectAdapter.SubjectV
             });
         }
 
-        // 4. A helper method to handle the UI changes
         private void updateExpandedState() {
             if (isExpanded) {
                 binding.recyclerViewInnerTasks.setVisibility(View.VISIBLE);
