@@ -26,15 +26,12 @@ public class SplashFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         new Handler(Looper.getMainLooper()).postDelayed(() -> {
-            // Check if the fragment is still added to an activity and has a context.
             if (isAdded() && getContext() != null) {
                 SessionManager sessionManager = SessionManager.getInstance(requireContext());
                 if (sessionManager.isLoggedIn()) {
-                    // User is remembered, go straight to the dashboard
                     NavHostFragment.findNavController(this)
                             .navigate(R.id.action_splashFragment_to_dashboardFragment);
                 } else {
-                    // User is not remembered, go to the login screen
                     NavHostFragment.findNavController(this)
                             .navigate(R.id.action_splashFragment_to_loginFragment);
                 }
