@@ -1,6 +1,5 @@
 package com.example.studyplanner.ui.auth;
 
-// Add these imports for the hideKeyboard method
 import android.content.Context;
 import android.view.inputmethod.InputMethodManager;
 import android.view.View;
