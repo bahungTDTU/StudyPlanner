@@ -7,10 +7,10 @@
     <color name="grey_text">#757575</color>
 
     <!-- Fix for missing resources -->
-    <color name="light_blue_100">#E3F2FD</color> <!-- Mapped to new soft_light_blue -->
-    <color name="black_900">#000000</color> <!-- Mapped to new black_text -->
-    <color name="status_completed">#4CAF50</color> <!-- Mapped to new green_progress -->
-    <color name="status_overdue">#F44336</color> <!-- Added red for overdue -->
+    <color name="light_blue_100">#E3F2FD</color> 
+    <color name="black_900">#000000</color> 
+    <color name="status_completed">#4CAF50</color> 
+    <color name="status_overdue">#F44336</color>
 
     <!-- New colors for Profile screen -->
     <color name="grey_divider">#E0E0E0</color>
