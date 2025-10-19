@@ -33,6 +33,5 @@ public class SettingsFragment extends PreferenceFragmentCompat {
                 return true;
             });
         }
-        // All the logout logic is now gone from this file
     }
 }
