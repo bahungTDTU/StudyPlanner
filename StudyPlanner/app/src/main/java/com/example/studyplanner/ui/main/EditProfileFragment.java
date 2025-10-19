@@ -53,17 +53,14 @@ public class EditProfileFragment extends Fragment {
 
     private void saveChanges() {
         if (currentUser != null) {
-            // Get the new values from the EditText fields
             currentUser.fullName = binding.textFieldFullName.getEditText().getText().toString().trim();
             currentUser.dateOfBirth = binding.textFieldDob.getEditText().getText().toString().trim();
             currentUser.schoolName = binding.textFieldSchool.getEditText().getText().toString().trim();
             currentUser.academicProcess = binding.textFieldAcademicProcess.getEditText().getText().toString().trim();
 
-            // Tell the ViewModel to update the user in the database
             mainViewModel.updateUser(currentUser);
 
             Toast.makeText(getContext(), "Profile Updated!", Toast.LENGTH_SHORT).show();
-            // Go back to the profile screen
             NavHostFragment.findNavController(this).popBackStack();
         }
     }
