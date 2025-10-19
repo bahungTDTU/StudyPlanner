@@ -1,5 +1,3 @@
-// File: app/src/main/java/com/example/studyplanner/NotificationReceiver.java
-
 package com.example.studyplanner;
 
 import android.app.PendingIntent;
@@ -28,7 +26,7 @@ public class NotificationReceiver extends BroadcastReceiver {
 
         // Build the notification
         NotificationCompat.Builder builder = new NotificationCompat.Builder(context, MainActivity.CHANNEL_ID)
-                .setSmallIcon(R.drawable.ic_menu_my_calendar) // Use a built-in icon
+                .setSmallIcon(R.drawable.ic_menu_my_calendar) 
                 .setContentTitle("Upcoming Deadline!")
                 .setContentText("Your task is due soon: " + taskTitle)
                 .setPriority(NotificationCompat.PRIORITY_DEFAULT)
