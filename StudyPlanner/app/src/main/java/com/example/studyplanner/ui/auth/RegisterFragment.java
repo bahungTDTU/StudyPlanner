@@ -45,7 +45,7 @@ public class RegisterFragment extends Fragment {
         });
 
         binding.buttonRegister.setOnClickListener(v -> {
-            hideKeyboard(); // This call will now work correctly
+            hideKeyboard(); 
             String username = binding.textFieldUsername.getEditText().getText().toString().trim();
             String email = binding.textFieldEmail.getEditText().getText().toString().trim();
             String password = binding.textFieldPassword.getEditText().getText().toString().trim();
