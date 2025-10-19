@@ -158,7 +158,7 @@ public class MainViewModel extends AndroidViewModel {
 
                 // Weekly Performance for the last 4 weeks
                 List<Float> weeklyPercentages = new ArrayList<>();
-                for (int w = 3; w >= 0; w--) { // W4, W3, W2, W1 -> final list will be W1, W2, W3, W4
+                for (int w = 3; w >= 0; w--) {
                     Calendar weekStart = Calendar.getInstance();
                     weekStart.add(Calendar.WEEK_OF_YEAR, -(w + 1));
                     long weekStartMillis = weekStart.getTimeInMillis();
