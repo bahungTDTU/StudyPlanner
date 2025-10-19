@@ -3,10 +3,6 @@ package com.example.studyplanner.ui.main;
 import com.github.mikephil.charting.formatter.ValueFormatter;
 import java.util.concurrent.TimeUnit;
 
-/**
- * A custom formatter for MPAndroidChart that converts a value (in milliseconds)
- * into a human-readable "Xh Ym" format.
- */
 public class HourMinuteFormatter extends ValueFormatter {
 
     @Override
