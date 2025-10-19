@@ -46,7 +46,6 @@ public class SubjectAdapter extends RecyclerView.Adapter<SubjectAdapter.SubjectV
         notifyDataSetChanged();
     }
 
-    // This is the ViewHolder with the new logic
     static class SubjectViewHolder extends RecyclerView.ViewHolder {
         private final ItemSubjectGroupBinding binding;
         private final TaskAdapter.OnTaskActionListener taskListener;
@@ -62,7 +61,7 @@ public class SubjectAdapter extends RecyclerView.Adapter<SubjectAdapter.SubjectV
         public void bind(SubjectWithTasks subjectWithTasks) {
             binding.textViewSubjectName.setText(subjectWithTasks.subject.name);
 
-            // Set up the inner RecyclerView (this part is the same)
+            // Set up the inner RecyclerView
             TaskAdapter innerTaskAdapter = new TaskAdapter(taskListener);
             binding.recyclerViewInnerTasks.setLayoutManager(new LinearLayoutManager(itemView.getContext()));
             binding.recyclerViewInnerTasks.setAdapter(innerTaskAdapter);
@@ -86,7 +85,6 @@ public class SubjectAdapter extends RecyclerView.Adapter<SubjectAdapter.SubjectV
                 updateExpandedState();
             });
 
-            // (Optional but good) Make the title clickable too
             binding.textViewSubjectName.setOnClickListener(v -> {
                 isExpanded = !isExpanded;
                 updateExpandedState();
