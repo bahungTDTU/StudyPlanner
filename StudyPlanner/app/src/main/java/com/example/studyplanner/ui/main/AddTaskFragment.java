@@ -108,7 +108,6 @@ public class AddTaskFragment extends Fragment {
             }
         });
 
-        // Task Type Spinner
         ArrayAdapter<CharSequence> taskTypeAdapter = ArrayAdapter.createFromResource(
                 requireContext(), R.array.task_types, android.R.layout.simple_spinner_item);
         taskTypeAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
