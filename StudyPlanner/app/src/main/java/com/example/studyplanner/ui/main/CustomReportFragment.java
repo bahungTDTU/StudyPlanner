@@ -51,7 +51,7 @@ public class CustomReportFragment extends Fragment {
             if (subjects != null) {
                 subjectList = subjects;
                 List<String> subjectNames = new ArrayList<>();
-                subjectNames.add("All Subjects"); // Add an option for all
+                subjectNames.add("All Subjects");
                 for (Subject subject : subjects) {
                     subjectNames.add(subject.name);
                 }
@@ -77,17 +77,14 @@ public class CustomReportFragment extends Fragment {
             return;
         }
 
-        // Show loading indicator and hide the results container
         binding.progressBarReport.setVisibility(View.VISIBLE);
         binding.reportResultsContainer.setVisibility(View.GONE);
 
         int subjectPosition = binding.spinnerSubjectReport.getSelectedItemPosition();
         int dateRangePosition = binding.spinnerDateRangeReport.getSelectedItemPosition();
 
-        // If "All Subjects" is selected, we use -1 as a special ID
         int subjectId = (subjectPosition == 0) ? -1 : subjectList.get(subjectPosition - 1).subjectId;
 
-        // Set the filters which will trigger the LiveData to update
         mainViewModel.setReportFilters(subjectId, dateRangePosition);
     }
 
