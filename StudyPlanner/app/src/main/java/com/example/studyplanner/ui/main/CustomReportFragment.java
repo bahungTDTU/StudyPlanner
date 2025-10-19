@@ -89,10 +89,8 @@ public class CustomReportFragment extends Fragment {
     }
 
     private void observeReportData() {
-        // Observe the completed count. When it updates, we know new data is ready.
         mainViewModel.reportCompletedCount.observe(getViewLifecycleOwner(), count -> {
             if (binding.progressBarReport.getVisibility() == View.VISIBLE) {
-                // This indicates a new report was generated
                 binding.progressBarReport.setVisibility(View.GONE);
                 binding.reportResultsContainer.setVisibility(View.VISIBLE);
             }
