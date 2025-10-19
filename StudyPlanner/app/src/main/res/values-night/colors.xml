@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base Colors -->
+    <color name="white">#1F1F1F</color> <!-- Used for card backgrounds in dark mode -->
+    <color name="black_text">#FFFFFF</color>
+    <color name="grey_text">#AFAFAF</color>
+    <color name="soft_light_blue">#2D2D2D</color> <!-- A slightly lighter card background -->
+
+    <!-- Status Colors -->
+    <color name="green_progress">#66BB6A</color>
+    <color name="status_overdue">#EF5350</color>
+
+    <!-- Other UI Colors -->
+    <color name="grey_divider">#424242</color>
+    <color name="blue_500">#42A5F5</color>
+    <color name="dark_background">#121212</color>
+    <color name="light_grey_text">#E0E0E0</color>
+</resources>
