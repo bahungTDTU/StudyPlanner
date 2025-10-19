@@ -28,7 +28,7 @@ public class ReportsFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        mainViewModel.loadUserId(); // Ensure data is loaded
+        mainViewModel.loadUserId(); 
 
         // Observe LiveData for task counts
         mainViewModel.displayTotalTaskCount.observe(getViewLifecycleOwner(), count -> {
