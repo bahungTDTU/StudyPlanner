@@ -1,0 +1,59 @@
+@startuml
+left to right direction
+skinparam packageStyle rectangle
+
+actor "Student" as student
+actor "System" as system
+
+rectangle "Study Planner Application" {
+  usecase "Register Account" as UC1
+  usecase "Login" as UC2
+  usecase "Manage Profile" as UC3
+  usecase "Add Subject" as UC4
+  usecase "Edit Subject" as UC5
+  usecase "Delete Subject" as UC6
+  usecase "View Subjects" as UC7
+  usecase "Create Task" as UC8
+  usecase "Edit Task" as UC9
+  usecase "Delete Task" as UC10
+  usecase "Mark Task Complete" as UC11
+  usecase "View Tasks" as UC12
+  usecase "View Calendar" as UC13
+  usecase "View Dashboard" as UC14
+  usecase "Generate Reports" as UC15
+  usecase "View Study Hours" as UC16
+  usecase "View Performance" as UC17
+  usecase "Send Notifications" as UC18
+  usecase "Manage Settings" as UC19
+}
+
+' Student interactions
+student --> UC1
+student --> UC2
+student --> UC3
+student --> UC4
+student --> UC5
+student --> UC6
+student --> UC7
+student --> UC8
+student --> UC9
+student --> UC10
+student --> UC11
+student --> UC12
+student --> UC13
+student --> UC14
+student --> UC15
+student --> UC16
+student --> UC17
+student --> UC19
+
+' System interactions
+system --> UC18
+
+' Relationships
+UC15 ..> UC16 : <<include>>
+UC15 ..> UC17 : <<include>>
+UC8 ..> UC7 : <<include>>
+UC9 ..> UC12 : <<include>>
+
+@enduml
