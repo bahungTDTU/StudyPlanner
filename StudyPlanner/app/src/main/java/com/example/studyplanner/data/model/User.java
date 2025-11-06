@@ -41,7 +41,6 @@ public class User implements Parcelable {
 
 
     // --- Parcelable Implementation ---
-    // This part is essential for passing the User object between fragments.
 
     protected User(Parcel in) {
         userId = in.readInt();
